@@ -1,0 +1,16 @@
+---
+title: "Exercise 2"
+author: "Fatih Ridha"
+date: "April 27, 2017"
+output: html_document
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library('plotly')
+library(dplyr)
+
+titanic <- as.data.frame(Titanic) %>% filter(Survived == 'Yes')
+p <- plot_ly(titanic, x = ~Class, y = ~Freq, type = 'bar')
+```
+#Titanic
+`r p`.
